@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCAPTCHA Demo</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Include the reCAPTCHA API script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>reCAPTCHA Demonstration</h1>
+        <p>This demo shows how to implement Google reCAPTCHA v2 using demo site keys.</p>
+        
+        <form id="demo-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <!-- reCAPTCHA container -->
+            <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="YOUR_NEW_SITE_KEY"></div>
+                <div id="captcha-error" class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submit-btn">Submit Form</button>
+            </div>
+        </form>
+        
+        <div id="result" class="result-container"></div>
+        
+        <div class="notes">
+            <h3>Important Notes:</h3>
+            <ul>
+                <li>This demo shows how reCAPTCHA protects forms from spam and abuse</li>
+                <li>The captcha must be completed before form submission is allowed</li>
+                <li>In a real application, the secret key would be used on the server to verify the token</li>
+                <li>Get your own keys from the <a href="https://www.google.com/recaptcha/admin" target="_blank">Google reCAPTCHA Admin Console</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
