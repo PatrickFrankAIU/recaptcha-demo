@@ -6,7 +6,7 @@
     <title>reCAPTCHA Demo</title>
     <link rel="stylesheet" href="main.css">
     <!-- Include the reCAPTCHA API script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdNniYrAAAAADA3zWsM6iQbbTG5IjayNDayIwpT"></script>
 </head>
 <body>
     <div class="container">
@@ -26,7 +26,7 @@
             
             <!-- reCAPTCHA container -->
             <div class="form-group">
-                <div class="g-recaptcha" data-sitekey="6LdNniYrAAAAADA3zWsM6iQbbTG5IjayNDayIwpT"></div>
+                <input type="hidden" id="recaptchaResponse" name="recaptcha_response">
                 <div id="captcha-error" class="error-message"></div>
             </div>
             
@@ -40,9 +40,10 @@
         <div class="notes">
             <h3>Important Notes:</h3>
             <ul>
-                <li>This demo shows how reCAPTCHA protects forms from spam and abuse</li>
-                <li>The captcha must be completed before form submission is allowed</li>
-                <li>In a real application, the secret key would be used on the server to verify the token</li>
+                <li>This demo uses reCAPTCHA v3, which runs invisibly in the background</li>
+                <li>reCAPTCHA v3 returns a score (0.0-1.0) indicating how likely the user is human</li>
+                <li>No user interaction is required - the token is generated automatically</li>
+                <li>In a real application, the server would verify the token and check the score</li>
                 <li>Get your own keys from the <a href="https://www.google.com/recaptcha/admin" target="_blank">Google reCAPTCHA Admin Console</a></li>
             </ul>
         </div>
