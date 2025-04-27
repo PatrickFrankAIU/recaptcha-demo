@@ -2,6 +2,7 @@
 
 # recaptcha-demo
 Demo of Google reCAPTCHA using Pages for hosting
+https://patrickfrankaiu.github.io/recaptcha-demo/
 
 For students in ITWEB program.
 Patrick Frank, Instructor
